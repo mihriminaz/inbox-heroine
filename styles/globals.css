@@ -1,0 +1,128 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Work Sans';
+  font-weight: 0 900;
+  src: url('/fonts/work-sans.woff2') format('woff2-variations');
+  font-display: swap;
+}
+
+@layer base {
+  :root {
+    --beams-primary: #605fe8;
+    --beams-primary-with-opacity: rgba(96, 95, 232, 0.5);
+    --beams-primary-dark: rgba(79, 77, 238, 1);
+    --beams-primary-dark-with-opacity: rgba(79, 77, 238, 0.5);
+    --beams-secondary: #dbd6ff;
+    --beams-tertiary: #f1efff;
+    --beams-blue: rgba(38, 167, 251, 1);
+    --beams-blue-with-opacity: rgba(38, 167, 251, 0.5);
+    --beams-green: rgba(17, 189, 168, 1);
+    --beams-green-with-opacity: rgba(17, 189, 168, 0.5);
+    --beams-solo-work: rgba(197, 189, 255, 1);
+    --beams-solo-work-with-opacity: rgba(197, 189, 255, 0.5);
+    --beams-orange: #fd7d4f;
+    --beams-bg-primary: #f9fbfc;
+
+    --beams-bg-secondary: #ffffff;
+    --beams-bg-tertiary: #f2f5f7;
+    --beams-bg-quaternary: #b5bcc1;
+
+    --beams-border-primary: #f2f5f7;
+    --beams-border-secondary: #e1e7ed;
+    --beams-border-tertiary: #7c90a3;
+
+    --beams-text-primary: #1e1e1e;
+    --beams-text-secondary: #4d555c;
+    --beams-text-tertiary: #7d858d;
+    --beams-text-disabled: #b8c2cd;
+    --beams-text-white: #ffffff;
+    --beams-text-link: #605fe8;
+
+    --beams-accent-negative: #f44336;
+    --beams-accent-negative-with-opacity: rgb(244 67 54 / 0.08);
+    --beams-accent-warning: #fbc02d;
+    --beams-accent-positive: #b8c2cd;
+
+    --beams-overlay: #ffffff;
+    --beams-overlay-shadow: 0px -4px 12px 0px #00000014;
+
+    --beams-snackbar-bg-success: #9ccc65;
+    --beams-snackbar-bg-error: #e7435c;
+    --beams-snackbar-bg-warning: #e7ae20;
+    --toastify-font-family: 'Work Sans', -apple-system, BlinkMacSystemFont,
+      Segoe UI, Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji',
+      'Segoe UI Emoji', 'Segoe UI Symbol' !important;
+  }
+
+  .dark {
+    --beams-primary: #4f4dee;
+
+    --beams-blue: #26a7fb;
+    --beams-green: #11bda8;
+    --beams-orange: #f68761;
+
+    --beams-bg-primary: #1e1e1e;
+    --beams-bg-secondary: #313034;
+    --beams-bg-tertiary: #414045;
+    --beams-bg-quaternary: #e8e8e8;
+
+    --beams-border-primary: #414045;
+    --beams-border-secondary: #3d3a44;
+    --beams-border-tertiary: #a7a4b4;
+
+    --beams-text-primary: #f9fbfc;
+    --beams-text-secondary: #e1e7ed;
+    --beams-text-tertiary: #f2f6f9;
+    --beams-text-disabled: #7d858d;
+    --beams-text-white: #ffffff;
+    --beams-text-link: #8383e7;
+
+    --beams-accent-negative: #e7435c;
+    --beams-accent-warning: #fbc02d;
+    --beams-accent-positive: #464549;
+
+    --beams-overlay: #3b3a41;
+    --beams-overlay-shadow: 0px -4px 16px 0px #00000080;
+  }
+
+  * {
+    font-family: 'Work Sans', -apple-system, BlinkMacSystemFont, Segoe UI,
+      Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji',
+      'Segoe UI Emoji', 'Segoe UI Symbol';
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+@layer utilities {
+  .container-small {
+    @apply max-w-[736px];
+  }
+  .container-medium {
+    @apply max-w-[890px];
+  }
+  .hideSvg > svg {
+    @apply hidden;
+  }
+}
+
+.css-1u9des2-indicatorSeparator {
+  @apply hidden;
+}
+.Toastify__toast {
+  @apply !text-sm !font-semibold;
+}
+.Toastify__toast-theme--colored.Toastify__toast--default {
+  @apply !bg-beams-primary;
+}
+.Toastify__toast-theme--colored.Toastify__toast--success {
+  @apply !bg-beams-snackbar-bg-success;
+}
+.Toastify__toast-theme--colored.Toastify__toast--warning {
+  @apply !bg-beams-snackbar-bg-warning;
+}
+.Toastify__toast-theme--colored.Toastify__toast--error {
+  @apply !bg-beams-snackbar-bg-error;
+}
