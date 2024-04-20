@@ -4,6 +4,7 @@ import Head from 'next/head';
 import { useState } from 'react';
 import { Email } from '../models/email';
 import styles from '../styles/Home.module.css';
+import EmailItem from '../components/EmailItem';
 import emailData from '../models/data/emails.json';
 import EmailParser from '../components/EmailParser';
 import Persona from '../components/Persona';
@@ -29,6 +30,17 @@ const Home: NextPage<Props> = ({ emails }) => {
       <div className="flex flex-col gap-y-6">
         <Persona/>
         <EmailParser />
+        <ul>
+            {(emailList || []).map(email => {
+              return (
+                <EmailItem
+                  key={email.id}
+                  emailItem={email}
+                />
+              );
+            })}
+          </ul>
+
         <a href="https://usebeams.com/">
           <Image src="/beams_logo.png" alt="Beams Logo" width={100} height={100} />
         </a>

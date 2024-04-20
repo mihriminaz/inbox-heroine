@@ -3,7 +3,6 @@ import Anthropic from '@anthropic-ai/sdk';
 import emailData from '../models/data/emails.json';
 import { UserProfile } from '../models/userProfile';
 import { useEffect, useState } from 'react';
-import styles from '../styles/EmailItem.module.css';
 import Parser from 'html-react-parser';
 
 export function generate_system_prompt_with_profile(userProfile) {
@@ -68,7 +67,19 @@ const EmailParser = () => {
        setFetching(true);
         async function fetchData() {
         try {
-        let ai_response = await generate_ai_response(anthropic, PMUser, userInput, emailData);
+        let ai_response = `Based on the emails provided, here are the ones that require a response, with suggested replies:
+
+        - From: chiaram@uchicago.edu
+        - Subject: RE: UChicago | Applications for Beams' Summer Internships 
+        - Suggested reply: Hi Chiara, thanks for the update. Please proceed with the offer to Mia. If she does not accept, we can consider Cedric for the EiR position and have Avery take the Data Science role. Let me know if you need any other information from my end. Best regards, Mihri
+        
+        - From: tobi@spaceredi.com
+        - Subject: Re: Space Redi Mentor Magic Request for Follow Up Meeting
+        - Suggested reply: Hi Tobi, I'm glad we could find a time that works. Looking forward to our meeting next week. Please let me know if there's anything specific you'd like me to prepare or if you have any questions in advance. Best, Mihri
+        
+        - From: max@nozomihealth.co
+        - Subject: Digital health product dev help for Beams
+        - Suggested reply: Hi Max, thanks for reaching out and for your interest in Beams. We are always open to exploring potential partnerships that align with our mission. I'd be happy to set up a call to discuss how Nozomi Health might be able to support our product development efforts. Please let me know your availability for a brief introductory call. Best regards, Mihri`;//await generate_ai_response(anthropic, PMUser, userInput, emailData);
         console.log('ai_response', ai_response);
         let some = ai_response.replace(/-/g, '<br/>');
         console.log('some', some);
