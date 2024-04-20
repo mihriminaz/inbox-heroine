@@ -1,20 +1,15 @@
 
 import React, { useState, useEffect, useRef } from "react";
 
-const divStyle = {
-    marginLeft: '100px',
-    marginRight: '100px',
-  };
-  
 const Persona = () => {
 
     return (
-        <div className="flex gap-x-2 items-center style={divStyle}">
-        <p > 
-        Welcome to InboxZeroine, your personal email concierge! 
-        I'm here to help you navigate through your busy inbox with ease. 
-        Let's focus on what matters most today. 
-        For starters, you might want to ask, 'What are the emails I should reply?'
+      <div className="flex flex-col items-center text-center">
+        <p> 
+        Welcome to <b>Inbox Zeroine</b>, your personal email concierge! <br/>
+        I'm here to help you navigate through your busy inbox with ease. <br/>
+        Let's focus on what matters most today. <br/>
+        For starters, you might want to ask, <b><i>'What are the emails I should reply?'</i></b>
         </p>
     </div>
     );
