@@ -1,0 +1,49 @@
+{
+    "emails": [
+        {
+            "id": "18eab6833fec828f",
+            "from": "jana@usebeams.com",
+            "to": "api-oauth-dev-verification@google.com",
+            "subject": "Re: OAuth Verification Request for Project Beams-Infra-Staging (id: beams-infra-staging)",
+            "deliveredAt": "2024-04-04T23:18:18.000Z",
+            "snippet": "Dear Google OAuth team, I am sharing two demo videos that show the OAuth consent screen workflow: If Google Account is already connected and calendar access given. Also giving access to email: video",
+            "body": "Dear Google OAuth team,\r\n\r\nI am sharing two demo videos that show the OAuth consent screen workflow:\r\n\r\n   1. If Google Account is already connected and calendar access given.\r\n   Also giving access to email: video here\r\n"
+        },
+        {
+            "id": "18ea629ce64a4f31",
+            "from": "jana@usebeams.com",
+            "to": "jack@someemail.com",
+            "subject": "Re: Jack meet Jana, Mihri (Beams",
+            "deliveredAt": "2024-04-03T22:52:05.000Z",
+            "snippet": "Yes, 4/9 at 2pm works well for us. Feel free to send a calendar invite. We are looking forward to it! Best, Mihri and Jana On Wed, Apr 3, 2024 at",
+            "body": "Yes, 4/9 at 2pm works well for us. Feel free to send a calendar invite.\r\n\r\nWe are looking forward to it! Best,\r\nMihri and Jana\r\n\r\nOn"
+        },
+        {
+            "id": "18ea5da87862c6bb",
+            "from": "jana@usebeams.com",
+            "to": "angel@somevc.com",
+            "subject": "Re: Excited to meet soon!",
+            "deliveredAt": "2024-04-03T21:25:29.000Z",
+            "snippet": "Hi Angel, We&#39;d love to meet you again and discuss our solution in more detail. Maybe some time next week? Let us know what works best for you. All the best, Mihri and Jana On Tue, Mar 19, 2024 at",
+            "body": "Hi Angel,\r\n\r\nWe'd love to meet you again and discuss our solution in more detail. Maybe\r\nsome time next week? Let us know what works best for you.\r\n\r\nAll the best,\r\nMihri and Jana\r\n\r\nOn Tue, Mar 19, 2024 at 6:04 PM Jana Schellong <jana@usebeams.com> wrote:\r\n\r\n> Hi Angel,\r\n>\r\n> It was so nice meeting you today. Thanks for a great conversation.\r\n>\r\n> As discussed, here's the link to our deck\r\n>.\r\n>\r\n> We are looking forward to receiving your feedback, as well as the list of\r\n> other potential investors you have in mind for us.\r\n>\r\n> Also, do let us know about the event at your office in May.\r\n>\r\n> All the best,\r\n> Mihri and Jana\r\n>\r\n> On Tue, Mar 19, 2024 at 12:18 PM"
+        },
+        {
+            "id": "18ea5d9b5f68c622",
+            "from": "jana@usebeams.com",
+            "to": "tom@gmail.com",
+            "subject": "Re: Tom meet Jana, Mihri (Beams",
+            "deliveredAt": "2024-04-03T21:24:34.000Z",
+            "snippet": "Hi Tom, How&#39;s this or next week looking like for you? We&#39;d love to meet you both again and discuss our solution in more detail. Let us know what works best for you. All the best,",
+            "body": "Hi Tom,\r\n\r\nHow's this or next week looking like for you?"
+        },
+        {
+            "id": "18ea0ac0d59a96ce",
+            "from": "jana@usebeams.com",
+            "to": "maria@gmail.com",
+            "subject": "Re: Your beams internship application",
+            "deliveredAt": "2024-04-02T21:16:37.000Z",
+            "snippet": "Hi Maria, Thanks again for your time last week, it was super nice getting to know you. You mentioned that you might not be able to spend the full internship in Berlin. We would like to offer you the",
+            "body": "Hi Maria,\r\n\r\nThanks again for your time last week, it was super nice getting to know\r\nyou. All the best,\r\nMihri and Jana"
+        }
+    ]
+  }
