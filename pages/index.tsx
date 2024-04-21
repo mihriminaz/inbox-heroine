@@ -8,27 +8,28 @@ import EmailItem from '../components/EmailItem';
 import emailData from '../models/data/emails.json';
 import EmailParser from '../components/EmailParser';
 import Persona from '../components/Persona';
+import React from 'react';
 
 type Props = {
   emails: Array<Email>;
 };
 
 const Home: NextPage<Props> = ({ emails }) => {
-  // Todo list array which displays the todo items
   const emailList = emailData.emails;
 
   return (
-    <div>
+    <div className={styles.container}>
       <Head>
         <title>Your email list today</title>
-        <meta name="description" content="Tigris app tutorial" />
+        <meta name="description" content="Inbox Zeroine" />
       </Head>
       <div className={styles.container}>
       <h1 className="text-title-fifth-mobile md:text-title-fifth mb-6">
       👋 How can I help you today?</h1>
 
+
+      <Persona/>
       <div className="flex flex-col gap-y-6">
-        <Persona/>
         <EmailParser />
         <ul>
             {(emailList || []).map(email => {
@@ -40,10 +41,6 @@ const Home: NextPage<Props> = ({ emails }) => {
               );
             })}
           </ul>
-
-        <a href="https://usebeams.com/">
-          <Image src="/beams_logo.png" alt="Beams Logo" width={100} height={100} />
-        </a>
       </div>
     </div>
     </div>

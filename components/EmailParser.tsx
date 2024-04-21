@@ -4,6 +4,7 @@ import emailData from '../models/data/emails.json';
 import { UserProfile } from '../models/userProfile';
 import { useEffect, useState } from 'react';
 import Parser from 'html-react-parser';
+import React from 'react';
 
 export function generate_system_prompt_with_profile(userProfile) {
     const profile_details = `The user is a ${userProfile.age} year old ${userProfile.gender}, 
@@ -50,6 +51,9 @@ const PMUser: UserProfile = {
   priority_for_emails: ["urgent", "deadline", "send", "please", "question"],
 };
 
+function delay(ms: number) {
+  return new Promise( resolve => setTimeout(resolve, ms) );
+}
 const EmailParser = () => {
 
     console.log('EmailParserEmailParserEmailParser');
@@ -67,6 +71,9 @@ const EmailParser = () => {
        setFetching(true);
         async function fetchData() {
         try {
+
+        await delay(5000);
+
         let ai_response = `Based on the emails provided, here are the ones that require a response, with suggested replies:
 
         - From: chiaram@uchicago.edu
@@ -96,7 +103,7 @@ const EmailParser = () => {
     }, []);
     
     return <div><div className="content">{Parser(emailsSorted ?? '')}</div>
-    <p>{fetching ? 'Fetching...' : 'Done.'}</p></div>;
+    <p><b><i>{fetching ? '           Reviewing your emails to identify the ones that need a response...' : 'Here we go! 🎉'}</i></b></p></div>;
 
 }
 export default EmailParser;
