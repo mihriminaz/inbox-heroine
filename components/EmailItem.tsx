@@ -2,11 +2,13 @@ import Image from 'next/image';
 import React from 'react';
 import { Email } from '../models/email';
 import styles from '../styles/EmailItem.module.css';
+import Parser from 'html-react-parser';
 
 type Props = {
   emailItem: Email;
 };
 const EmailItem = ({ emailItem }: Props) => {
+
   return (
     <>
       <li className={styles.each}>
@@ -23,7 +25,7 @@ const EmailItem = ({ emailItem }: Props) => {
             height={20}
             alt="Check Image"
           />
-          <span style={emailItem.completed ? { textDecoration: 'line-through' } : {}}>{emailItem.snippet}</span>
+          <span style={emailItem.completed ? { textDecoration: 'line-through' } : {}}>{Parser(emailItem.snippet)}</span>
         </button>
         <button
           className={styles.deleteBtn}
