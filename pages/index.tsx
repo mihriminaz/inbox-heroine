@@ -15,10 +15,11 @@ type Props = {
 };
 
 const Home: NextPage<Props> = ({ emails }) => {
+  // Todo list array which displays the todo items
   const emailList = emailData.emails;
 
   return (
-    <div className={styles.container}>
+    <div>
       <Head>
         <title>Your email list today</title>
         <meta name="description" content="Inbox Zeroine" />
@@ -27,10 +28,13 @@ const Home: NextPage<Props> = ({ emails }) => {
       <h1 className="text-title-fifth-mobile md:text-title-fifth mb-6">
       👋 How can I help you today?</h1>
 
+      <div>
 
       <Persona/>
+       <EmailParser />
+
+    </div>
       <div className="flex flex-col gap-y-6">
-        <EmailParser />
         <ul>
             {(emailList || []).map(email => {
               return (
